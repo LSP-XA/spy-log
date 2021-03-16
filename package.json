@@ -30,7 +30,7 @@
   "scripts": {
     "execute": "ts-node --transpile-only --compiler-options '{ \"module\": \"commonjs\" }'",
     "watch": "ts-node-dev --no-notify --respawn --transpile-only --compiler-options '{ \"module\": \"commonjs\" }'",
-    "lint": "eslint --ignore-path .gitignore --cache --max-warnings 0 --ext js,jsx,ts,tsx,vue --fix .",
+    "lint": "eslint --ignore-path .gitignore --cache --ext js,jsx,ts,tsx,vue --fix .",
     "format": "prettier . --write",
     "release": "npm run readme && git pull && git add -A && git commit && git push --follow-tags",
     "pretest": "not-sync coverage",
