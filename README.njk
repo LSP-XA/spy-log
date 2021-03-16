@@ -1,0 +1,40 @@
+{% include "module-header" %}
+
+# Installation
+
+```sh
+npm install {{ package.name }}
+```
+
+| Format                             | Instructions                                                       |
+| ---------------------------------- | ------------------------------------------------------------------ |
+| **TypeScript**                     | `import Log from "{{ package.name }}";`                            |
+| **Node (CommonJS)**                | `const { Log } = require("{{ package.name }}");`                   |
+| **ES Modules (Browsers, webpack)** | `import Log from "{{ package.name }}";`                            |
+
+# Synopsis
+
+```ts
+import Log from 'spy-log'
+
+async function subTask(logger) {
+  logger.info('massage in suntask')
+  await request('http://example.com', logger.group('getExample'))
+  logger.end()
+}
+
+const logger = new Log('main')
+
+logger.log('main start')
+subTask(logger.group('subtask'))
+```
+
+# Details
+
+<!-- usage -->
+
+<!-- commands -->
+
+# API
+
+{% include "api.md" %}
